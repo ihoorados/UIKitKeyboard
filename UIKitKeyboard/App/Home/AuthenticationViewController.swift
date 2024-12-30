@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  AuthenticationViewController.swift
 //  UIKitKeyboard
 //
 //  Created by Hoorad on 12/30/24.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeViewController: UIViewController {
+class AuthenticationViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
