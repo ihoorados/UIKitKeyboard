@@ -31,14 +31,6 @@ class AuthenticationViewController: UIViewController {
         return view
     }()
     
-    private let titleLabel: UILabel = {
-        let title = UILabel()
-        title.font = .preferredFont(forTextStyle: .largeTitle, compatibleWith: nil)
-        title.text = "Login"
-        title.textAlignment = .center
-        return title
-    }()
-    
     private var errorLabel: UILabel = {
         let label = UILabel()
         label.text = "Oops, incorrect email or password!"
@@ -106,12 +98,11 @@ class AuthenticationViewController: UIViewController {
         self.view.addSubview(scrollView)
         self.scrollView.addSubview(scrollViewContainer)
         
-        self.scrollViewContainer.addArrangedSubview(headerView)
-        self.scrollViewContainer.addArrangedSubview(titleLabel)
-        self.scrollViewContainer.addArrangedSubview(emailTextField)
-        self.scrollViewContainer.addArrangedSubview(passwordTextField)
-        self.scrollViewContainer.addArrangedSubview(submitButton)
-        self.scrollViewContainer.addArrangedSubview(errorLabel)
+        self.scrollViewContainer.addArrangedSubview(self.headerView)
+        self.scrollViewContainer.addArrangedSubview(self.emailTextField)
+        self.scrollViewContainer.addArrangedSubview(self.passwordTextField)
+        self.scrollViewContainer.addArrangedSubview(self.submitButton)
+        self.scrollViewContainer.addArrangedSubview(self.errorLabel)
 
         self.scrollView.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         self.scrollView.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
